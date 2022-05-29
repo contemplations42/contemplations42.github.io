@@ -1,0 +1,240 @@
+
+/* Only use sepia mode on screens */
+@media screen {
+
+  /* == Sepia Light theme, i.e. solarized light ==
+     This is based on the default (light) theme:
+     https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/_colors.scss
+
+     Note: this is INCOMPLETE as of 2021-10.
+  */
+  [data-md-color-scheme="sepia-light"] {
+    /*
+    --md-default-bg-color:                #e4d6c6;
+     	no: #e4d6c6 == hsl(32, 36%, 84%)
+     	maybe (GIMP): #e4d6c6 == hsl(32, 13.2%, 89.4%)
+    */
+
+    /* hue in the range [0,360] - change this variable to alter the tone
+     * of the theme, e.g. to make it more reddish or greenish. This is a slate-
+     * specific variable, but the same approach may be adapted to custom themes. */
+    /* --md-hue: 32; */
+    --md-hue: 32;
+
+    /* Default color shades */
+    --md-default-fg-color:             hsla(var(--md-hue), 14%, 17%, 1);
+    --md-default-fg-color--light:      hsla(var(--md-hue), 14%, 17%, 0.62);
+    --md-default-fg-color--lighter:    hsla(var(--md-hue), 14%, 17%, 0.32);
+    --md-default-fg-color--lightest:   hsla(var(--md-hue), 14%, 17%, 0.12);
+    --md-default-bg-color:             hsla(var(--md-hue), 24%, 82%, 1);
+    --md-default-bg-color--light:      hsla(var(--md-hue), 24%, 82%, 0.54);
+    --md-default-bg-color--lighter:    hsla(var(--md-hue), 24%, 82%, 0.26);
+    --md-default-bg-color--lightest:   hsla(var(--md-hue), 24%, 82%, 0.07);
+
+    /* Code color shades */
+    --md-code-fg-color:                hsla(var(--md-hue), 18%, 10%, 1);
+    --md-code-bg-color:                hsla(var(--md-hue), 18%, 78%, 1);
+
+
+  }
+
+  /* == Sepia Dark theme, i.e. solarized dark ==
+     This is based on the slate (dark) theme:
+     https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/palette/_scheme.scss
+
+     Note: this is INCOMPLETE as of 2021-10.
+  */
+  [data-md-color-scheme="sepia-dark"] {
+    /* 
+    --md-default-bg-color:                #e4d6c6;
+    */
+
+    /* Slate's hue in the range [0,360] - change this variable to alter the tone
+     * of the theme, e.g. to make it more reddish or greenish. This is a slate-
+     * specific variable, but the same approach may be adapted to custom themes. */
+    --md-hue: 44;
+    /* useful tool for choosing Hue: 
+        https://hslpicker.com/ 
+    */
+
+
+    /* Default color shades */
+    --md-default-fg-color:             hsla(var(--md-hue), 15%, 70%, 1);
+    --md-default-fg-color--light:      hsla(var(--md-hue), 15%, 70%, 0.62);
+    --md-default-fg-color--lighter:    hsla(var(--md-hue), 15%, 70%, 0.32);
+    --md-default-fg-color--lightest:   hsla(var(--md-hue), 15%, 70%, 0.12);
+    --md-default-bg-color:             hsla(var(--md-hue), 15%, 17%, 1);
+    --md-default-bg-color--light:      hsla(var(--md-hue), 15%, 17%, 0.54);
+    --md-default-bg-color--lighter:    hsla(var(--md-hue), 15%, 17%, 0.26);
+    --md-default-bg-color--lightest:   hsla(var(--md-hue), 15%, 17%, 0.07);
+
+    /* Code color shades */
+    --md-code-fg-color:                hsla(var(--md-hue), 20%, 65%, 1);
+    --md-code-bg-color:                hsla(var(--md-hue), 25%, 10%, 1);
+
+    /* Code highlighting color shades */
+    --md-code-hl-color:                hsla(#{hex2hsl($clr-blue-a200)}, 0.15);
+    --md-code-hl-number-color:         hsla(6, 74%, 63%, 1);
+    --md-code-hl-special-color:        hsla(340, 83%, 66%, 1);
+    --md-code-hl-function-color:       hsla(291, 57%, 65%, 1);
+    --md-code-hl-constant-color:       hsla(250, 62%, 70%, 1);
+    --md-code-hl-keyword-color:        hsla(219, 66%, 64%, 1);
+    --md-code-hl-string-color:         hsla(150, 58%, 44%, 1);
+    --md-code-hl-name-color:           var(--md-code-fg-color);
+    --md-code-hl-operator-color:       var(--md-default-fg-color--light);
+    --md-code-hl-punctuation-color:    var(--md-default-fg-color--light);
+    --md-code-hl-comment-color:        var(--md-default-fg-color--light);
+    --md-code-hl-generic-color:        var(--md-default-fg-color--light);
+    --md-code-hl-variable-color:       var(--md-default-fg-color--light);
+
+    /* Typeset color shades */
+    --md-typeset-color:                var(--md-default-fg-color);
+
+    /* Typeset `a` color shades */
+    --md-typeset-a-color:              var(--md-primary-fg-color);
+
+    /* Typeset `mark` color shades */
+    --md-typeset-mark-color:           hsla(#{hex2hsl($clr-blue-a200)}, 0.3);
+
+    /* Typeset `kbd` color shades */
+    --md-typeset-kbd-color:            hsla(var(--md-hue), 15%, 94%, 0.12);
+    --md-typeset-kbd-accent-color:     hsla(var(--md-hue), 15%, 94%, 0.2);
+    --md-typeset-kbd-border-color:     hsla(var(--md-hue), 15%, 14%, 1);
+
+    /* Typeset `table` color shades */
+    --md-typeset-table-color:          hsla(var(--md-hue), 75%, 95%, 0.12);
+
+    /* Admonition color shades */
+    --md-admonition-bg-color:          hsla(var(--md-hue), 0%, 100%, 0.025);
+
+    /* Footer color shades */
+    --md-footer-bg-color:              hsla(var(--md-hue), 15%, 12%, 0.87);
+    --md-footer-bg-color--dark:        hsla(var(--md-hue), 15%, 10%, 1);
+
+    /* Black and white primary colors */
+    &[data-md-color-primary="black"],
+    &[data-md-color-primary="white"] {
+
+      /* Typeset color shades */
+      --md-typeset-a-color:            hsla(#{hex2hsl($clr-indigo-400)}, 1);
+    }
+
+  }
+  [data-md-color-scheme="sepia-dark"] .md-header {
+    /* 
+      Darken the header.
+      references:
+          https://stackoverflow.com/questions/23208200/how-to-darken-a-background-using-css
+    */
+    filter: brightness(75%);
+  }
+
+
+  [data-md-color-scheme="slate"] .md-header {
+    /* 
+      Darken the header.
+      references:
+          https://stackoverflow.com/questions/23208200/how-to-darken-a-background-using-css
+    */
+    filter: brightness(75%);
+  }
+
+}
+
+
+/* 
+   custom primary colors, based on  
+   https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/palette/_primary.scss 
+*/
+[data-md-color-primary="blue-gray-on-light"] {
+  --md-primary-fg-color:             #5f7d8a;
+  --md-primary-fg-color--light:      #7c9aa7;
+  --md-primary-fg-color--dark:       #3e5a66;
+
+  /* Non-Inverted text for darker shades */
+  --md-primary-bg-color:           hsla(0, 0%, 100%, 1);
+  --md-primary-bg-color--light:    hsla(0, 0%, 100%, 0.7);
+}
+
+[data-md-color-primary="blue-gray-on-dark"] {
+  --md-primary-fg-color:             #a2c5d4;
+  --md-primary-fg-color--light:      #c9e8f5;
+  --md-primary-fg-color--dark:       #8fb5c5;
+
+  /* Inverted text for lighter shades */
+  --md-primary-bg-color:           hsla(0, 0%, 0%, 0.87);
+  --md-primary-bg-color--light:    hsla(0, 0%, 0%, 0.54);
+
+  /* Non-Inverted text for darker shades */
+  /*
+  --md-primary-bg-color:           hsla(0, 0%, 100%, 1);
+  --md-primary-bg-color--light:    hsla(0, 0%, 100%, 0.7);
+  */
+}
+
+[data-md-color-primary="gray-sepia-light"] {
+  --md-primary-fg-color:             #74664d;
+  --md-primary-fg-color--light:      #94876f;
+  --md-primary-fg-color--dark:       #665840;
+
+  /* Non-Inverted text for darker shades */
+  --md-primary-bg-color:           hsla(0, 0%, 100%, 1);
+  --md-primary-bg-color--light:    hsla(0, 0%, 100%, 0.7);
+}
+
+
+
+[data-md-color-primary="gray-sepia-dark"] {
+  --md-primary-fg-color:             #d4bb8e;
+  --md-primary-fg-color--light:      #e2cfab;
+  --md-primary-fg-color--dark:       #a8946e;
+
+  /* Inverted text for lighter shades */
+  --md-primary-bg-color:           hsla(0, 0%, 0%, 0.87);
+  --md-primary-bg-color--light:    hsla(0, 0%, 0%, 0.54);
+}
+
+
+
+/* 
+   custom accent colors, based on  
+   https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/palette/_accent.scss 
+*/
+[data-md-color-accent="gray-sepia-light"] {
+  --md-accent-fg-color:              #6d5c3d;
+  --md-accent-fg-color--transparent: hsla(#6d5c3d, 0.1);
+
+  /* Non-Inverted text for darker shades */
+  --md-accent-bg-color:           hsla(0, 0%, 100%, 1);
+  --md-accent-bg-color--light:    hsla(0, 0%, 100%, 0.7);
+}
+
+[data-md-color-accent="gray-sepia-dark"] {
+  --md-accent-fg-color:              #ccbc9e;
+  --md-accent-fg-color--transparent: hsla(#ccbc9e, 0.1);
+
+  /* Inverted text for lighter shades */
+  --md-primary-bg-color:           hsla(0, 0%, 0%, 0.87);
+  --md-primary-bg-color--light:    hsla(0, 0%, 0%, 0.54);
+}
+
+
+[data-md-color-accent="blue-gray-on-light"] {
+  --md-accent-fg-color:             #5f7d8a;
+  --md-accent-fg-color--transparent: hsla(#5f7d8a, 0.1);
+
+  /* Non-Inverted text for darker shades */
+  --md-accent-bg-color:           hsla(0, 0%, 100%, 1);
+  --md-accent-bg-color--light:    hsla(0, 0%, 100%, 0.7);
+}
+
+[data-md-color-accent="blue-gray-on-dark"] {
+  --md-accent-fg-color:             #a8cedf;
+  --md-accent-fg-color--transparent: hsla(#a8cedf, 0.1);
+
+  /* Non-Inverted text for darker shades */
+  --md-accent-bg-color:           hsla(0, 0%, 100%, 1);
+  --md-accent-bg-color--light:    hsla(0, 0%, 100%, 0.7);
+}
+
+
